@@ -37,6 +37,8 @@ class GetUserDetailContainer extends PureComponent {
   };
 
   render() {
+    const { name, lastName, affordibilityRange } = this.props.userDetail;
+    const { isShowModal } = this.props;
     return (
       <>
         <div className="row border">
@@ -59,6 +61,8 @@ class GetUserDetailContainer extends PureComponent {
                   >
                     {APP_CONSTANT.GET_DETAIL}
                   </button>
+
+                  {isShowModal ? `Name: ${name} Lastname: ${lastName}  Affordibility Range: ${affordibilityRange}` : null}
                 </div>
               </div>
             </div>
